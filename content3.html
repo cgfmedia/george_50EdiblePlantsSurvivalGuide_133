@@ -1,1 +1,959 @@
-<html>        <head>            <meta name="viewport" content="width=device-width, initial-scale=1">             <link rel="stylesheet" href="jquery/jquery.mobile-1.1.0.min.css" />            <link rel="stylesheet" href="theme.css" />                  <script src="jquery-1.6.4.min.js"></script>          <script src="jquery/jquery.mobile-1.1.0.js"></script>                    <script>         if( (navigator.userAgent.match(/iPhone/i)) || (navigator.userAgent.match(/iPod/i)) || (navigator.userAgent.match(/Android/i)) ){                    	$.getScript("cordova-2.0.0.js");  			$.getScript("phonegap.js");  			$.getScript("PushNotification.js");			  		}  		</script>      		<script type="text/javascript">             $(document).ready(function() {  				var articleNumber;  				$('.backClick').click(function() {  					$('#content_navigation_content').show();  					$('#article' + articleNumber).hide();  				});  				$('.content_navigation_link h3 a').click(function() {  					$('#content_navigation_content').hide();  					articleNumber = $(this).attr('href').substr(-1);  					$('.content_navigation_link').removeClass('active');  					$(this).parent().parent().addClass('active');  					$('#article' + articleNumber).show();                     				});  				  				 document.addEventListener("deviceready",initPushwoosh,false);    			});		            </script>                    <!--Turn off notification-->      </head>        <body>                <div data-role="page" data-add-back-btn="true">                    <div data-role="header">                    <div class="ui-bar ui-bar-a"><center><h1>50 Edible Plants</h1></center>                  </div>                </div>              <a id="homeButton" href="index.html" rel="external" ><img src="./home.png" alt="Home" /></a>              <style type="text/css">                   #homeButton{position: relative;top: -28px;left: 5px;width: 75px;height: 18px;display: block;text-align: center;}                  #homeButton:active{ opacity: 0.7; }               </style>                    <div data-role="content">                                          <style type="text/css">                      .content_navigation_content div,.content_navigation_content p,.content_navigation_content ul,.content_navigation_content h2,.content_navigation_content h3,.content_navigation_content h4,.content_navigation_content img{                          padding:0px;                           margin:0px;                      }                      .content_navigation_link h3 a{                          text-decoration:none;                      }                      .content_navigation_link{                          width: 100%;                          text-align: center;                          line-height: 50px;                          display: block;                          height: 50px;                          border-bottom: 1px solid white;                      }                      #content_navigation_content{                          /*                        overflow: hidden;                                                  width: 200px;*/                          background: grey;                          margin: 0 auto;                          border-radius: 10px;                          /*                        position: fixed;                                                  left: 50%;                                                  top: 40px;*/                          /*margin-left: -100px;*/                          border-radius: 10px;                           box-shadow: 8px 8px 8px silver;                      }                      .content_navigation_link a{                          color:white !important;                          display:block;                      }                      .content_navigation_link:hover, .content_navigation_link:active{                          background: #27a1c5;                          cursor:pointer;                      }                      .active{                          background: #27a1c5;                          cursor:pointer;                      }                      .content_block{                          word-wrap: break-word;                          display: none;                      }                      #navigationContent{                          /*position: relative;*/                      }                      .content_navigation_link:first-child{                          border-radius: 10px 10px 0px 0px;                       }                      .content_navigation_link:last-child{                          border-radius: 0px 0px 10px 10px;                       }                      .content_navigation_link .active{                          background: none;                      }                      #backMenu{                          position: fixed;                          bottom: 75px;                          right: 10px;                           opacity: 0.5;                          display: none;                      }                      #backMenu:hover,#backMenu:active{                          opacity: 1;                          cursor: pointer;                      }                  </style>                  <div id="navigationContent">                      <div id="content_navigation_content" class="content_navigation_content" style="display: none;"><div class="content_navigation_link"><h3><a href="#article1">Article 1</a></h3></div></div>                      <div id="content_blocks"><div class="content_block" id="article1" style="display: block;"><p><strong><em>1 - Amaranth </em>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<img alt="Amaranth" src="http://www.doomsday-survival.info/wp-content/uploads/2013/08/amaranth-100x114.jpg" style="width: 100px; height: 114px; border-width: 2px; border-style: solid; float: right;"></strong></p>    <p>Leaves - Late Spring/Early Fall</p>    <p>Seeds - Late Summer/Late fall</p>    <p>Description:</p>    <p>&nbsp;</p>    <hr>  <p>&nbsp;</p>    <p><em><strong>2 - Balsam Fir &nbsp; </strong></em>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<img alt="Balsam Fir" src="http://www.doomsday-survival.info/wp-content/uploads/2013/08/balsam-fir-with-cones-120x112.jpg" style="width: 120px; height: 112px; border-width: 2px; border-style: solid; float: right;"></p>    <p>Balsam fir Inner bark - Spring</p>    <p>Pitch - Year around</p>    <p>Description:</p>    <p>&nbsp;</p>    <hr>  <p>&nbsp;</p>    <p><em><strong>3 - Blackberries &nbsp; &nbsp; &nbsp;</strong></em> &nbsp; &nbsp;<img alt="Blackberries" src="http://www.doomsday-survival.info/wp-content/uploads/2013/08/Blackberrie-120x100.jpg" style="width: 120px; height: 100px; border-width: 2px; border-style: solid; float: right;"></p>    <p>Berries - Summer</p>    <p>Leaves - Summer</p>    <p>Young Shoots - Spring</p>    <p>Description:</p>    <p>&nbsp;</p>    <hr>  <p>&nbsp;</p>    <p><span style="line-height: 1.6em;"><strong><em>4 - Blueberries/Huckleberries</em></strong> &nbsp; &nbsp;&nbsp;<img alt="Blueberries" src="http://www.doomsday-survival.info/wp-content/uploads/2013/08/bluberries-100x85.jpg" style="width: 100px; height: 85px; border-width: 2px; border-style: solid; float: right;"></span></p>    <p>Berries - Summer to Fall</p>    <p>Description:</p>    <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<img alt="Red Huckleberries" src="http://www.doomsday-survival.info/wp-content/uploads/2013/08/red-huckleberries.jpg" style="width: 100px; height: 85px; border-width: 2px; border-style: solid; float: right;"></p>    <div>  <p><br>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</p>    <p>&nbsp;</p>    <hr>  <p>&nbsp;</p>    <p><em><strong>5 - Burdock &nbsp; </strong></em>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<img alt="Burdock" src="http://www.doomsday-survival.info/wp-content/uploads/2013/09/burdock-resize.jpg" style="width: 114px; height: 114px; border-width: 2px; border-style: solid; float: right;"></p>    <p>Stems - Spring to Summer</p>    <p>Leaves - Spring</p>    <p>Roots - Summer</p>    <p>Description:</p>    <p>&nbsp;</p>    <hr>  <p><br>  <em><strong>6 - Cattails &nbsp;</strong></em> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<img alt="Cattails" src="http://www.doomsday-survival.info/wp-content/uploads/2013/09/Cattail.jpg" style="width: 114px; height: 125px; border-width: 2px; border-style: solid; float: right;"></p>    <p>Young Shoots and Satlks - Early Spring</p>    <p>Roots - Any time summer through Winter</p>    <p>Description:</p>    <p>&nbsp;</p>    <hr>  <p><br>  <em><strong>7 - Chickweed &nbsp; &nbsp; &nbsp; </strong></em>&nbsp; <img alt="Chickweed" src="http://www.doomsday-survival.info/wp-content/uploads/2013/09/chickweed-resize.jpg" style="width: 114px; height: 100px; border-width: 2px; border-style: solid; float: right;">&nbsp; &nbsp; &nbsp;&nbsp;</p>    <p>Stems - All Year</p>    <p>Leaves - All Year</p>    <p>Description:</p>    <p>&nbsp;</p>    <hr>  <p><br>  <em><strong>8 - Clovers &nbsp; </strong></em>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<img alt="Clover" src="http://www.doomsday-survival.info/wp-content/uploads/2013/09/Clover.jpg" style="width: 120px; height: 100px; border-width: 2px; border-style: solid; float: right;"></p>    <p>Leaves - Spring to Summer</p>    <p>Flowers - Spring to Summer</p>    <p>Seeds - Spring to Summer</p>    <p>Roots - Fall to Winter</p>    <p>Description:&nbsp;</p>    <p>&nbsp;</p>    <hr>  <p><br>  <em><strong>9 - Cottonwoods </strong></em>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<img alt="Cottonwood" src="http://www.doomsday-survival.info/wp-content/uploads/2013/09/cottonwood-leaves.jpg" style="width: 118px; height: 100px; border-width: 2px; border-style: solid; float: right;"></p>    <p>Inner Bark - Spring</p>    <p>Description:</p>    <p>&nbsp;</p>    <hr>  <p><br>  <em><strong>10 - Cranberries </strong></em>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<img alt="Wild Cranberries" src="http://www.doomsday-survival.info/wp-content/uploads/2013/09/wild-cranberries.jpg" style="width: 133px; height: 110px; border-width: 2px; border-style: solid; float: right;"></p>    <p>Berries - Fall to Winter</p>    <p>Description:</p>    <p>&nbsp;</p>    <hr>  <p><br>  <em><strong>11 - Dandelion </strong></em>&nbsp; &nbsp; &nbsp; &nbsp;<img alt="Dandelion" src="http://www.doomsday-survival.info/wp-content/uploads/2013/09/Dandelion.jpg" style="width: 133px; height: 100px; border-width: 2px; border-style: solid; float: right;"></p>    <p>Leaves - Early spring</p>    <p>Roots - Fall to Early Spring</p>    <p>Flower Buds - Early Spring</p>    <p>Description:</p>    <p>&nbsp;</p>    <hr>  <p><br>  <em><strong>12 - Elderberries &nbsp; &nbsp; </strong></em>&nbsp; &nbsp;<img alt="Elderberries" src="http://www.doomsday-survival.info/wp-content/uploads/2013/09/Wild-Elderberries.jpg" style="width: 133px; height: 100px; border-width: 2px; border-style: solid; float: right;"> &nbsp;&nbsp;</p>    <p>Flowers - Early summer</p>    <p>Berries - Late Summer to Early Fall</p>    <p>Description:</p>    <p>&nbsp;</p>    <hr>  <p><br>  <em><strong>13 - Evening Primrose</strong></em> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<img alt="Evening Primrose" src="http://www.doomsday-survival.info/wp-content/uploads/2013/09/wild-evening-primrose.jpg" style="width: 133px; height: 100px; border-width: 2px; border-style: solid; float: right;"></p>    <p>Leaves - Late Spring to Mid/Late summer</p>    <p>Description:</p>    <p>&nbsp;</p>    <hr>  <p><br>  <em><strong>14 - Fly Honeysuckle</strong></em>&nbsp;<img alt="Fly Honeysuckle" src="http://www.doomsday-survival.info/wp-content/uploads/2013/09/fly-honeysuckle.jpg" style="width: 133px; height: 100px; border-width: 2px; border-style: solid; float: right;"></p>    <p>Berries - Summer</p>    <p>Description:</p>    <p>&nbsp;</p>    <hr>  <p><br>  <em><strong>15 - Grasses </strong></em>&nbsp; &nbsp; &nbsp;<img alt="Wild Grasses" src="http://www.doomsday-survival.info/wp-content/uploads/2013/09/wild-grass.jpg" style="width: 133px; height: 100px; border-width: 2px; border-style: solid; float: right;"></p>    <p>Description:</p>    <p>&nbsp;</p>    <p>&nbsp;</p>    <hr>  <p><br>  <em><strong>16 - Greenbriers </strong></em>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<img alt="Wild Greenbrier Tips" src="http://www.doomsday-survival.info/wp-content/uploads/2013/09/wild-greenbrier-tips.jpg" style="width: 133px; height: 100px; border-width: 2px; border-style: solid; float: right;"></p>    <p>Leaves - Spring to Summer</p>    <p>Roots - All Year Around</p>    <p>Shoots - Spring to Summer</p>    <p>Tendrils - Spring to Summer</p>    <p>Description:</p>    <p>&nbsp;</p>    <hr>  <p><br>  <em><strong>17 - Hemlock Trees</strong></em>&nbsp; &nbsp;&nbsp;<img alt="Hemlock" src="http://www.doomsday-survival.info/wp-content/uploads/2013/09/wild-hemlock-tree.jpg" style="width: 133px; height: 100px; border-width: 2px; border-style: solid; float: right;"></p>    <p>Inner Bark - Spring</p>    <p>Needles - All Year Around</p>    <p>Description:</p>    <p>&nbsp;</p>    <hr>  <p><br>  <em><strong>18 - Maple Trees </strong></em>&nbsp;&nbsp;<img alt="Maple Tree" src="http://www.doomsday-survival.info/wp-content/uploads/2013/09/Maple-tree-and-leaves.jpg" style="width: 133px; height: 100px; border-width: 2px; border-style: solid; float: right;"></p>    <p>Pitch/Sap - Early Spring</p>    <p>Inner bark - Spring</p>    <p>Seedlings - Early Spring</p>    <p>Seeds - Fall</p>    <p>Description:</p>    <p>&nbsp;</p>    <hr>  <p>&nbsp;</p>    <p><span style="line-height: 1.6em;"><em><strong>19 - Milkweed &nbsp; &nbsp; </strong></em>&nbsp;<img alt="Milkweed w/Buds" src="http://www.doomsday-survival.info/wp-content/uploads/2013/09/Milkweed-with-buds.jpg" style="width: 133px; height: 100px; border-width: 2px; border-style: solid; float: right;"></span></p>    <p>Flowers - Summer</p>    <p>Seed Pods - Late Summer</p>    <p>Young Leaves - Early Spring</p>    <p>Young Shoots - Early Spring</p>    <p>Description:</p>    <p>&nbsp;</p>    <hr>  <p>&nbsp;</p>    <p><em><strong>20 - Nettles </strong></em>&nbsp; &nbsp; &nbsp;&nbsp;<img alt="Stinging Nettles" src="http://www.doomsday-survival.info/wp-content/uploads/2013/09/Stinging-Nettles.jpg" style="width: 133px; height: 100px; border-width: 2px; border-style: solid; float: right;"></p>    <p>Leaves - Summer&nbsp;</p>    <p>Shoots - Spring</p>    <p>Roots - All Year Around</p>    <p>Description:</p>    <p>&nbsp;</p>    <hr>  <p>&nbsp;</p>    <p><em><strong>21 - New Jersey Tea &nbsp;</strong></em> &nbsp; &nbsp;&nbsp;<img alt="New Jersey Tea" src="http://www.doomsday-survival.info/wp-content/uploads/2013/09/New-Jersey-Tea.jpg" style="width: 133px; height: 100px; border-width: 2px; border-style: solid; float: right;"></p>    <p>Leaves - Late Spring to Early Fall</p>    <p>Description:</p>    <p>&nbsp;</p>    <hr>  <p>&nbsp;</p>    <p><em><strong>22 - Passion Flower </strong></em>&nbsp; &nbsp;<img alt="Passion Flower" src="http://www.doomsday-survival.info/wp-content/uploads/2013/09/Wild-Passion-Flower.jpg" style="width: 133px; height: 100px; border-width: 2px; border-style: solid; float: right;"></p>    <p>Berries/Fruit - Late Summer to Early Fall</p>    <p>Description:</p>    <p>&nbsp;</p>    <hr>  <p>&nbsp;</p>    <p><em><strong>23 - Peppermint &nbsp;</strong></em> &nbsp; &nbsp;<img alt="Wild Peppermint" src="http://www.doomsday-survival.info/wp-content/uploads/2013/09/Wild-Peppermint.jpg" style="width: 133px; height: 100px; border-width: 2px; border-style: solid; float: right;"></p>    <p>Leaves - Summer to Fall</p>    <p>Description:</p>    <p>&nbsp;</p>    <hr>  <p>&nbsp;</p>    <p><span style="line-height: 1.6em;"><em><strong>24 - Pine Trees</strong> </em>&nbsp; &nbsp; &nbsp;&nbsp;<img alt="Pine Tree" src="http://www.doomsday-survival.info/wp-content/uploads/2013/09/wild-pine-tree.jpg" style="width: 133px; height: 100px; border-width: 2px; border-style: solid; float: right;"></span></p>    <p>Needles - All Year Around</p>    <p>Pollen Anthers - Spring</p>    <p>Cone/seeds - All Year around</p>    <p>Description:</p>    <p>&nbsp;</p>    <hr>  <p>&nbsp;</p>    <p><em><strong>25 - Plantain &nbsp; &nbsp;&nbsp;</strong></em><img alt="Plantain" src="http://www.doomsday-survival.info/wp-content/uploads/2013/09/Wild-Plantain.jpg" style="width: 133px; height: 100px; border-width: 2px; border-style: solid; float: right;"></p>    <p>Leaves - Early Spring</p>    <p>Seeds - Summer</p>    <p>Description:</p>    <p>&nbsp;</p>    <hr>  <p><br>  26 - Pond Lily</p>    <p>Seeds - Late Summer to Fall</p>    <p>Roots - Fall to Early Spring</p>    <p>Description:</p>    <p>&nbsp;</p>    <p><br>  27 - Prickly Pears</p>    <p>Pads - Spring to Early Summer</p>    <p>Seeds/Fruit - Late Summer to Fall</p>    <p>Description:</p>    <p>&nbsp;</p>    <p><br>  28 - Reed</p>    <p>Leaves - early Spring</p>    <p>Shoots - Early Spring</p>    <p>Seeds - Fall&nbsp;</p>    <p>Young Stems - Early summer</p>    <p>Roots - Fall to Early Spring</p>    <p>Description:</p>    <p>&nbsp;</p>    <p><br>  29 - Salal</p>    <p>Berries - Fall</p>    <p>Description:</p>    <p>&nbsp;</p>    <p><br>  30 - Saw Palmetto</p>    <p>Fruit - fall</p>    <p>Terminal Bud - All Year around</p>    <p>Description:</p>    <p>&nbsp;</p>    <p>31 - Sheep Sorrel</p>    <p>Leaves - Spring and Summer</p>    <p>Description:</p>    <p>&nbsp;</p>    <p><br>  32 - Spruce Tree's</p>    <p>Inner Bark - Spring</p>    <p>Needles - All year around</p>    <p>Young shoots - Spring</p>    <p>Description:</p>    <p>&nbsp;</p>    <p><br>  33 - Sumac&nbsp;</p>    <p>Berries - Summer</p>    <p>Description:</p>    <p>&nbsp;</p>    <p><br>  34 - Sun Flower</p>    <p>Seeds - Late Summer to Fall</p>    <p>Description:</p>    <p>&nbsp;</p>    <p>35 - Sweet Fern</p>    <p>Leaves - Late spring to Early Fall</p>    <p>Nuts - Summer to Fall</p>    <p>Description:</p>    <p>&nbsp;</p>    <p><br>  36 - Tamarack</p>    <p>Inner Bark - spring</p>    <p>shoots - Spring</p>    <p>Description:</p>    <p>&nbsp;</p>    <p>37 - Thistles</p>    <p>Leaves - Spring to Early Summer</p>    <p>Stalks - Summer Pre-Bloom</p>    <p>Roots - Spring to fall</p>    <p>Description:</p>    <p>&nbsp;</p>    <p>38 - Walnuts</p>    <p>Pitch/sap - Early Spring</p>    <p>Nuts - Fall</p>    <p>Description:</p>    <p>&nbsp;</p>    <p>39 - Watercress</p>    <p>Young Leaves - All Year Around</p>    <p>Stems - All Year Around</p>    <p>Description:</p>    <p>&nbsp;</p>    <p>40 - Wild Asparagus</p>    <p>Young Shoots - Early Spring</p>    <p>Description:</p>    <p>&nbsp;</p>    <p>41 - Wild Carrot</p>    <p>Roots - Fall to Early Spring</p>    <p>Description:</p>    <p>&nbsp;</p>    <p><br>  42 - Wild Ginger</p>    <p>Roots - Early spring to Fall</p>    <p>Description:</p>    <p>&nbsp;</p>    <p>43 - Wild Grapes</p>    <p>Leaves - Early Summer</p>    <p>Fruit - Late Summer to Fall</p>    <p>Description:</p>    <p>&nbsp;</p>    <p>44 - Wild Onions</p>    <p>Leaves - Spring</p>    <p>Bulbs - All Year Around</p>    <p>Bulblets - Summer</p>    <p>Description:</p>    <p>&nbsp;</p>    <p>45 - Wild Parsnip</p>    <p>Roots - Fall to Early Spring</p>    <p>Description:</p>    <p>&nbsp;</p>    <p><br>  46 - Wild Potato Vine</p>    <p>Roots - All year Around&nbsp;</p>    <p>Description:</p>    <p>&nbsp;</p>    <p><br>  47 - Wild Raisins</p>    <p>Fruit - Fall</p>    <p>Description:</p>    <p>&nbsp;</p>    <p>48 - Wild Strawberries</p>    <p>Leaves - Summer</p>    <p>Fruits - Summer</p>    <p>Description:</p>    <p>&nbsp;</p>    <p><br>  49 - Willows</p>    <p>Inner Bark - Spring Through Summer</p>    <p>Description:</p>    <p>&nbsp;</p>    <p><br>  50 - Wood Sorrels</p>    <p>Leaves - Spring to Summer</p>    <p>Description:</p>  </div>  </div></div>                      <img id="backMenu" src="./backMenu.png">                  </div>                                              </div><!-- /content -->  			              <style> .nav-glyphish-example .ui-btn .ui-btn-inner { padding-top: 40px !important; width: 60px!important;}		.nav-glyphish-example .ui-btn .ui-icon { width: 30px!important; height: 30px!important; margin-left: -15px !important; box-shadow: none!important; -moz-box-shadow: none!important; -webkit-box-shadow: none!important; -webkit-border-radius: 0 !important; border-radius: 0 !important; }#tab1 .ui-icon { background:  url("icons_tech_1579.png") 50% 50% no-repeat; background-size: 50px 50px; }#tab2 .ui-icon { background:  url("icons_communication_1092.png") 50% 50% no-repeat; background-size: 50px 50px; }  a[href="youtubeKeywords.html"] .ui-icon { background:  url("icon(50).png") 50% 50% no-repeat !important;background-size: 30px 30px !important; }   a[href="content3.html"] .ui-icon { background:  url("icon(12).png") 50% 50% no-repeat !important;background-size: 30px 30px !important; }   a[href="content3.html"] .ui-icon { background:  url("icon(2).png") 50% 50% no-repeat !important;background-size: 30px 30px !important; }   a[href="content3.html"] .ui-icon { background:  url("icon(55).png") 50% 50% no-repeat !important;background-size: 30px 30px !important; }   a[href="content3.html"] .ui-icon { background:  url("icon(42).png") 50% 50% no-repeat !important;background-size: 30px 30px !important; } #tab3 .ui-icon { background:  url("64Px_-_504-11.png") 50% 50% no-repeat; background-size: 30px 30px; }#tab4 .ui-icon { background:  url("64Px_-_504-210.png") 50% 50% no-repeat; background-size: 30px 30px; }#tab5 .ui-icon { background:  url("more.png") 50% 50% no-repeat; background-size: 30px 30px; } .ui-content{ word-wrap: break-word; } </style>                <div data-role="footer" data-position="fixed" class="nav-glyphish-example" data-id="myfooter" data-theme="a" data-tap-toggle="false"><div data-role="navbar" class="nav-glyphish-example"><ul><li><a href="content3.html" id="tab2" data-icon="custom" rel="external"  data-gourl="content3.html" class="" onclick="window.open('content3.html','_self', 'location=yes')">Introduction</a></li><li><a href="" id="tab2" data-icon="custom" rel="external"  data-gourl="" class="" onclick="window.open('','_self', 'location=yes')">The 4 Core</a></li><li><a href="" id="tab2" data-icon="custom" rel="external"  data-gourl="" class="" onclick="window.open('','_self', 'location=yes')">50 Edible Plants</a></li><li><a href="" id="tab2" data-icon="custom" rel="external"  data-gourl="" class="" onclick="window.open('','_self', 'location=yes')">Resources</a></li><li><a href="more.html" id="tab5" data-icon="custom" rel="external">More</a></li></ul></div></div>            </div>	        </body>    </html>
+<html>
+
+
+
+    <head>
+
+
+
+        <meta name="viewport" content="width=device-width, initial-scale=1"> 
+
+
+
+        <link rel="stylesheet" href="jquery/jquery.mobile-1.1.0.min.css" />
+
+
+
+        <link rel="stylesheet" href="theme.css" />
+
+
+
+
+
+        <script src="jquery-1.6.4.min.js"></script>
+
+        <script src="jquery/jquery.mobile-1.1.0.js"></script>
+
+
+
+        <script>
+
+            if ((navigator.userAgent.match(/iPhone/i)) || (navigator.userAgent.match(/iPod/i)) || (navigator.userAgent.match(/Android/i))) {
+
+
+
+                $.getScript("cordova-2.0.0.js");
+
+                $.getScript("phonegap.js");
+
+                $.getScript("PushNotification.js");
+
+            }
+
+        </script>
+
+
+
+
+
+        <script type="text/javascript">
+
+            function checkTotleCount() {
+
+                if ($('.content_navigation_link h3 a').length == 1) {
+
+                    $('#content_navigation_content').hide();
+
+                    $('#article1').show();
+
+                }
+
+            }
+
+            $(document).ready(function() {
+
+                var articleNumber;
+
+                $('.backClick').click(function() {
+
+                    $('#content_navigation_content').show();
+
+                    $('#article' + articleNumber).hide();
+
+                    checkTotleCount();
+
+                });
+
+                $('.content_navigation_link h3 a').click(function() {
+
+                    $('#content_navigation_content').hide();
+
+                    articleNumber = $(this).attr('href').substr(-1);
+
+                    $('.content_navigation_link').removeClass('active');
+
+                    $(this).parent().parent().addClass('active');
+
+                    $('#article' + articleNumber).show();
+
+                });
+
+                checkTotleCount();
+
+                document.addEventListener("deviceready", initPushwoosh, false);
+
+
+
+            }
+
+            );
+
+        </script>
+
+
+
+        <!--Turn off notification-->
+
+    </head>
+
+
+
+    <body>
+
+
+
+
+
+
+
+        <div data-role="page" data-add-back-btn="true">
+
+
+
+
+
+
+
+            <div data-role="header">
+
+
+
+                <div class="ui-bar ui-bar-a"><center><h1>50 Edible Plants</h1></center>
+
+                </div>
+
+
+
+            </div>
+
+            <a id="homeButton" href="index.html" rel="external" ><img src="./home.png" alt="Home" /></a>
+
+            <style type="text/css"> 
+
+                #homeButton{position: relative;top: -28px;left: 5px;width: 75px;height: 18px;display: block;text-align: center;}
+
+                #homeButton:active{ opacity: 0.7; } 
+
+            </style>
+
+
+
+
+
+
+
+            <div data-role="content">
+
+
+
+                
+
+
+                <style type="text/css">
+                    .content_navigation_content div,.content_navigation_content p,.content_navigation_content ul,.content_navigation_content h2,.content_navigation_content h3,.content_navigation_content h4,.content_navigation_content img{
+                        padding:0px; 
+                        margin:0px;
+                    }
+                    .content_navigation_link h3 a{
+                        text-decoration:none;
+                    }
+                    .content_navigation_link{
+                        width: 100%;
+                        text-align: center;
+                        line-height: 50px;
+                        display: block;
+                        height: 50px;
+                        border-bottom: 1px solid white;
+                    }
+                    #content_navigation_content{
+                        /*                        overflow: hidden;
+                                                width: 200px;*/
+                        background: grey;
+                        margin: 0 auto;
+                        border-radius: 10px;
+                        /*                        position: fixed;
+                                                left: 50%;
+                                                top: 40px;*/
+                        /*margin-left: -100px;*/
+                        border-radius: 10px; 
+                        box-shadow: 8px 8px 8px silver;
+                    }
+                    .content_navigation_link a{
+                        color:white !important;
+                        display:block;
+                    }
+                    .content_navigation_link:hover, .content_navigation_link:active{
+                        background: #27a1c5;
+                        cursor:pointer;
+                    }
+                    .active{
+                        background: #27a1c5;
+                        cursor:pointer;
+                    }
+                    .content_block{
+                        word-wrap: break-word;
+                        display: none;
+                    }
+                    #navigationContent{
+                        /*position: relative;*/
+                    }
+                    .content_navigation_link:first-child{
+                        border-radius: 10px 10px 0px 0px; 
+                    }
+                    .content_navigation_link:last-child{
+                        border-radius: 0px 0px 10px 10px; 
+                    }
+                    .content_navigation_link .active{
+                        background: none;
+                    }
+                    #backMenu{
+                        position: fixed;
+                        bottom: 75px;
+                        right: 10px; 
+                        opacity: 0.5;
+                        display: none;
+                    }
+                    #backMenu:hover,#backMenu:active{
+                        opacity: 1;
+                        cursor: pointer;
+                    }
+                </style>
+                <div id="navigationContent">
+                    <div class="content_navigation_content" id="content_navigation_content" style="display: none;"><div class="content_navigation_link"><h3><a href="#article1">Article 1</a></h3></div></div>
+                    <div id="content_blocks"><div class="content_block" id="article1" style="display: block;"><p><strong><em>1 - Amaranth </em>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<img style="border-width: 2px; border-style: solid; width: 100px; height: 114px; float: right;" alt="Amaranth" src="http://www.doomsday-survival.info/wp-content/uploads/2013/08/amaranth-100x114.jpg"></strong></p>
+
+<p><strong>Leaves</strong> - Late Spring/Early Fall</p>
+
+<p><strong>Seeds</strong> - Late Summer/Late fall</p>
+
+<p><strong>Description:</strong></p>
+
+<p>Amaranth is a weedlike annual and is a hardy and stout herbal weed. It grows anywhere from 5 inches up to over 5 feet. It has rough stems that are&nbsp;hairy or fuzzy and can have many branches. The leaves are anywhere from 3 to 7 inches long and will alternate and they are rough and veiny. The underside of young leaves will be a light purple in color. It flowers in clusters which can be up to 3 inches long.</p>
+
+<p>The seeds are plentiful and will be a shiny dark color, most times black or very dark brown and will be found at the ends of branches and stems. The root will be reddish in color.</p>
+
+<p><strong>Locale: </strong></p>
+
+<p>All across the North America and Canada, mostly in disturbed or waste soil. Not usually found in higher elevations/altitude or desert areas.</p>
+
+<p><strong>Edibles:</strong></p>
+
+<p>The leaves and seeds are the edible portions. Younger leaves can be consumed raw and older or more mature leaves can be boiled as an herbal tea.</p>
+
+<p>An accumulation of nitrates are common with amaranth and with that being said it is wise to not consume large amounts, it can cause stomach discomfort.</p>
+
+<p>The seeds can be used for flour when boiled and ground.</p>
+
+<p><strong>Medicinal Qualities:</strong></p>
+
+<p>Using the leaves, they can be&nbsp;boiled&nbsp;for a tea. This can help with common diarhea.</p>
+
+<p><strong>Misc:</strong></p>
+
+<p>Can be used for other survival tools, stems can be shredded and ground for fire tinder and the longer more straight shafts of the stem when dry&nbsp;can be used for a make shift hand drill for starting a fire.</p>
+
+<p>&nbsp;</p>
+
+<hr>
+<p>&nbsp;</p>
+
+<p><em><strong>2 - Balsam Fir &nbsp; </strong></em>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<img style="border-width: 2px; border-style: solid; width: 120px; height: 112px; float: right;" alt="Balsam Fir" src="http://www.doomsday-survival.info/wp-content/uploads/2013/08/balsam-fir-with-cones-120x112.jpg"></p>
+
+<p><strong>Inner bark</strong> - Spring</p>
+
+<p><strong>Pitch</strong> - Year around</p>
+
+<p><strong>Description:</strong></p>
+
+<p>The balsam fir can be a tall fir ranging up to over 70 feet in height and it's shape can be related&nbsp;to a steeple and&nbsp;can be relatively&nbsp;slender and can be up to 2 feet indiameter.&nbsp; The needles being anywhere from 1/2 inch up to 1-1/2 inches in length are flat with a rounded base that are dark green&nbsp;on top&nbsp;with 2 distinct white lines on the bottom. The cones vary in size and&nbsp;can be from 1 inch up to 4 or 5 inches in length, they can be &nbsp;purple to a light green color and grow from the tops of the branches standing in an upright position.</p>
+
+<p><strong>Locale:</strong></p>
+
+<p>Can be found anywhere from north central US to southern Canada to the north east US. Found in cooler climates in wet&nbsp;or damp&nbsp;wooded areas.</p>
+
+<p><strong>Edibles:</strong></p>
+
+<p>The inner bark is used for flour when removed, dried and ground up. The pitch can be eaten raw and is very concentrated only to be eaten in small quantities.</p>
+
+<p><strong>Medicinal Uses:</strong></p>
+
+<p>The bark and smaller twigs and branches can be crushed up and boiled into a tea and used for kidney, bladder and rheumatiod issues. The pitch can also be used as a topical when applied on abrasions or cuts to help with healing.</p>
+
+<p><strong>Misc:</strong></p>
+
+<p>The pitch can also be boiled down and used for a glue or waterproofing.</p>
+
+<p>&nbsp;</p>
+
+<hr>
+<p>&nbsp;</p>
+
+<p><em><strong>3 - Blackberries &nbsp; &nbsp; &nbsp;</strong></em> &nbsp; &nbsp;<img style="border-width: 2px; border-style: solid; width: 120px; height: 100px; float: right;" alt="Blackberries" src="http://www.doomsday-survival.info/wp-content/uploads/2013/08/Blackberrie-120x100.jpg"></p>
+
+<p><strong>Berries</strong> - Summer</p>
+
+<p><strong>Leaves</strong> - Summer</p>
+
+<p><strong>Young Shoots</strong> - Spring</p>
+
+<p><strong>Description:</strong></p>
+
+<p>The blackberry shrub is almost a nuisance as it is very hardy. It is very thorny and has long viney branches, can grow to lengths up to and beyond 10 feet in height and length. The stem is green and sometimes a purplish red&nbsp;in color and&nbsp;usually very angular or a natural octagonal in shape.</p>
+
+<p>The leaves can be 1-1/2 inches up to 10 inches in length and are grown in groups and usually&nbsp;have&nbsp;3 to &nbsp;7 leaflets. The flowers are white with 5 petals with the berries ranging in color from red to very dark black, hence the name Blackberry. They are very juicy and are an excellent source of survival food.</p>
+
+<p><strong>Locale:</strong></p>
+
+<p>Blackberries can be found just about everywhere in the United States and Canada and they are usually found in thickets, forest, along old roadways,&nbsp;near and along creeks and wet areas very abundantly.</p>
+
+<p><strong>Edibles:</strong></p>
+
+<p>The berries and younger stems can be eaten raw, berries can also be boiled into juice,&nbsp;tea or a jelly. The older leaves when dried can be boiled and steeped as a tea.</p>
+
+<p><strong>Misc:</strong></p>
+
+<p>The straight portions of the vine like stems when dried are very hard and stiff and can be used for hand drills or crushed and shredded&nbsp;then used for fire tinder.</p>
+
+<p>&nbsp;</p>
+
+<hr>
+<p>&nbsp;</p>
+
+<p><span style="line-height: 1.6em;"><strong><em>4 - Blueberries/Huckleberries</em></strong> &nbsp; &nbsp;&nbsp;<img style="border-width: 2px; border-style: solid; width: 100px; height: 85px; float: right;" alt="Blueberries" src="http://www.doomsday-survival.info/wp-content/uploads/2013/08/bluberries-100x85.jpg"></span></p>
+
+<p><strong>Berries</strong> - Summer to Fall</p>
+
+<p><strong>Description:</strong></p>
+
+<p><strong><img style="border-width: 2px; border-style: solid; width: 100px; height: 85px; float: right;" alt="Huckleberry" src="http://www.doomsday-survival.info/wp-content/uploads/2013/08/red-huckleberries.jpg"></strong></p>
+
+<p>The blueberry and huckleberry are similar with blueberries being blue or dark purple in color and the huckleberries being a shallow red in color.</p>
+
+<p>The shrub itself can be 2 feet up to 8 feet in height with many branches that are delicate in nature. Usually green in color with sometimes having a light purplish tint. The leaves can be anywhere from 1 to 4 inches in length and alternating. They are deciduous, toothless and eliptical in shape. The flowers are usually white or very light green in color, have small pedals ranging in size from 1/4 inch upto 1/2 inch or more.</p>
+
+<p>The berries can be found in slight variations in color from blue, black or red in color and can be identified by a star shape at the top formed by the calyx.</p>
+
+<p><strong>Locale:</strong></p>
+
+<p>Bluberries and huckleberries can be found across the United states and Canada and are usually located in forests, thickets, swamps and wooded areas and are usually found in acidic soils. The&nbsp;exception to this&nbsp;is they are not usually found&nbsp;in desert or plains type areas.</p>
+
+<p><strong>Edibles:</strong></p>
+
+<p>The berries can be eaten raw. They can be cooked and or boiled or dried. As a <strong>cautionary advisory</strong>, blueberries and huckleberries&nbsp;can be confused easily with the buckthorn berry. They are similar in color, the difference is the buckthorn is poisonous and&nbsp;will not have the star shaped calyx formed at the top like the blueberry or huckleberry and the stem of the buckthorn&nbsp;usually will have thorns.</p>
+
+<p><strong>Misc:</strong></p>
+
+<p>The branches that are straight can be used for a hand drill for fire starting or even used as make shift arrow shafts.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+
+<div>
+<p>&nbsp;</p>
+
+<hr>
+<p>&nbsp;</p>
+
+<p><em><strong>5 - Burdock &nbsp; </strong></em>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<img style="border-width: 2px; border-style: solid; width: 114px; height: 114px; float: right;" alt="Burdock" src="http://www.doomsday-survival.info/wp-content/uploads/2013/09/burdock-resize.jpg"></p>
+
+<p><strong>Stems</strong> - Spring to Summer</p>
+
+<p><strong>Leaves</strong> - Spring</p>
+
+<p><strong>Roots</strong> - Summer</p>
+
+<p><strong>Description:</strong></p>
+
+<p>The burdock plant is an biennial which is usually a&nbsp;large brush type of herb. It grows between 1 and 6 feet in height and has a course type of stem that is fairly stiff and usually has multiple branches. The leaves are ovate and can be very large on the lower portions, almost heart like in shape and have a scaloped and wavy edge. They are&nbsp;considered toothless and have fuzzy or hairy undersides. Most leaves will alternate.</p>
+
+<p>The flower will be red to purple in color. The seed pod will be round shaped and will be cluster like with numerous spurs or&nbsp;burr like small thorns.</p>
+
+<p><strong>Locale:</strong></p>
+
+<p>Usually found all over the United States except southern portions&nbsp;and also found in Canada. They can be located in moist ground, wet and forested areas&nbsp;in disturbed types of&nbsp;soils or swampy areas.</p>
+
+<p><strong>Edibles:</strong></p>
+
+<p>The leaves can be boiled and steeped but should be done with several changes of water and used for tea. The stem and the roots can be peeled and boiled and eaten like vegetables. The seeds can be&nbsp;germinated and grown to sprouts&nbsp;and used as a garnish.</p>
+
+<p><strong>Misc:</strong></p>
+
+<p>Long dry stems can be used for hand drills for fire starting or if dried can be crushed and shredded to use as tinder.</p>
+
+<p>&nbsp;</p>
+
+<hr>
+<p><br>
+<em><strong>6 - Cattails &nbsp;</strong></em> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<img style="border-width: 2px; border-style: solid; width: 114px; height: 125px; float: right;" alt="Cattails" src="http://www.doomsday-survival.info/wp-content/uploads/2013/09/Cattail.jpg"></p>
+
+<p><strong>Young Shoots and Stalks</strong> - Early Spring</p>
+
+<p><strong>Roots</strong> - Any time summer through Winter</p>
+
+<p><strong>Description:</strong></p>
+
+<p>Simply put the cattail is like the jack of all trades, it has many qualities and uses&nbsp;and is considered the grocery store of the wilderness. It is hardy, has a plethora of edibles and other excellent survival uses.</p>
+
+<p>It is easy to spot and is abundant. It has long or tall stiff stalks, long sword like leaves and a thick&nbsp;brown seed top shaped like a hot dog and nearly the same in length. They can reach heights of over 8 feet. In the spring time it will sprout&nbsp; 2 flower heads, one above the other with the one at the top being the male and the bottom a female.&nbsp;The male as it grows will turn into a tan or light brown&nbsp;pollen cluster while the lower female will turn into the recognizable dark brown fuzzy seed top.</p>
+
+<p><strong>Locale:</strong></p>
+
+<p>The cattail can be found all over north America and Canada and will be&nbsp;located easily&nbsp;in swampy type of wetland areas, edges of ponds and lakes. Almost anywhere there is standing water you will find cattails.</p>
+
+<p>&nbsp;</p>
+
+<p><strong>Edibles: </strong></p>
+
+<p>As mentioned earlier, the cattail is a&nbsp;wilderness grocery store&nbsp;and is edible year around. In spring time the younger shoots and stalks can be peeled or stripped and can be eaten either raw or by boiling. During late spring the flower heads or seed tops can be stripped down and boiled to eat. The pollen heads, which form in early summer can be picked and eaten raw or dried and ground in to flour. In&nbsp;late summer all the way through winter the roots can be collected and eaten. They are found at the base of the plant and look like horn shaped sprouts, can be eaten raw or&nbsp;boiled. The root stalk can also be gathered and then&nbsp;ground or crushed, placed in water and dissolved&nbsp;in to flour after it is drained and dry. It contains large amounts of starch.</p>
+
+<p><strong>Medicinal Qualities:</strong></p>
+
+<p>Green or ripened cattail flowers can be crushed and used a a balm or salve for burns, cuts and abrasions. There is a milky juice type substance that has high medicinal value which can be found between the young leaves and is used for an antiseptic, anaesthetic and a styptic. It has a numbing effect like novacaine and can be used for pain or discomfort including for a toothache when rubbed on to the gums.</p>
+
+<p><strong>Misc:</strong></p>
+
+<p>The stalks can be used for hand drills for fire starting, shelter building structure, arrows for hunting and other survival tools. The brown seed tops, when pulled or stripped&nbsp;can be used for insulation, fire starter/tinder, bedding and stuffed in to clothing for warmth. The leaves can be used for shelter&nbsp;thatching and basket weaving. It truly is the most versatile plant available in the wilderness.</p>
+
+<p>&nbsp;</p>
+
+<hr>
+<p><br>
+<em><strong>7 - Chickweed &nbsp; &nbsp; &nbsp; </strong></em>&nbsp; <img style="border-width: 2px; border-style: solid; width: 114px; height: 100px; float: right;" alt="Chickweed" src="http://www.doomsday-survival.info/wp-content/uploads/2013/09/chickweed-resize.jpg">&nbsp; </p>
+
+<p><strong>Stems</strong> - All Year</p>
+
+<p><strong>Leaves</strong> - All Year</p>
+
+<p><strong>Description:</strong></p>
+
+<p>Chickweed is a small ground cover type of winter annual that is usually 2 to 10 inches in height with trailing branches that can reach lengths of up to 15 inches. The stem is loose and finely haired with multiple branching. The leaves are usually 1/2 to 1 inch long and alternate and have pointed tips. The flowers are small with a bilobed structure with 5 petals with them having a deep or apparent groove or cleft.</p>
+
+<p><strong>Locale:</strong></p>
+
+<p>The chickweed is found all across the United States and Canada and can be&nbsp;located in forested, thickets, fields, woodlands and meadows.</p>
+
+<p><strong>Edibles: </strong></p>
+
+<p>The young tender leaves and stems can be eaten raw or can be boiled to make a tea. Older stems and leaves can be boiled to soften for eating.</p>
+
+<p><strong>Medicinal Qualities:</strong></p>
+
+<p>The leaves and stems can be boiled to make a porridge which can then be applied to treat burns, cuts and abrasions or rashes.</p>
+
+<p>&nbsp;</p>
+
+<hr>
+<p><br>
+<em><strong>8 - Clovers &nbsp; </strong></em>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<img style="border-width: 2px; border-style: solid; width: 120px; height: 100px; float: right;" alt="Clover" src="http://www.doomsday-survival.info/wp-content/uploads/2013/09/Clover.jpg"></p>
+
+<p>Leaves - Spring to Summer</p>
+
+<p>Flowers - Spring to Summer</p>
+
+<p>Seeds - Spring to Summer</p>
+
+<p>Roots - Fall to Winter</p>
+
+<p>Description:</p>
+
+<p>&nbsp;</p>
+
+<hr>
+<p><br>
+<em><strong>9 - Cottonwoods </strong></em>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<img style="border-width: 2px; border-style: solid; width: 118px; height: 100px; float: right;" alt="Cottonwood" src="http://www.doomsday-survival.info/wp-content/uploads/2013/09/cottonwood-leaves.jpg"></p>
+
+<p>Inner Bark - Spring</p>
+
+<p>Description:</p>
+
+<p>&nbsp;</p>
+
+<hr>
+<p><br>
+<em><strong>10 - Cranberries </strong></em>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<img style="border-width: 2px; border-style: solid; width: 133px; height: 110px; float: right;" alt="Wild Cranberries" src="http://www.doomsday-survival.info/wp-content/uploads/2013/09/wild-cranberries.jpg"></p>
+
+<p>Berries - Fall to Winter</p>
+
+<p>Description:</p>
+
+<p>&nbsp;</p>
+
+<hr>
+<p><br>
+<em><strong>11 - Dandelion </strong></em>&nbsp; &nbsp; &nbsp; &nbsp;<img style="border-width: 2px; border-style: solid; width: 133px; height: 100px; float: right;" alt="Dandelion" src="http://www.doomsday-survival.info/wp-content/uploads/2013/09/Dandelion.jpg"></p>
+
+<p>Leaves - Early spring</p>
+
+<p>Roots - Fall to Early Spring</p>
+
+<p>Flower Buds - Early Spring</p>
+
+<p>Description:</p>
+
+<p>&nbsp;</p>
+
+<hr>
+<p><br>
+<em><strong>12 - Elderberries &nbsp; &nbsp; </strong></em>&nbsp; &nbsp;<img style="border-width: 2px; border-style: solid; width: 133px; height: 100px; float: right;" alt="Elderberries" src="http://www.doomsday-survival.info/wp-content/uploads/2013/09/Wild-Elderberries.jpg"></p>
+
+<p>Flowers - Early summer</p>
+
+<p>Berries - Late Summer to Early Fall</p>
+
+<p>Description:</p>
+
+<p>&nbsp;</p>
+
+<hr>
+<p><br>
+<em><strong>13 - Evening Primrose</strong></em> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<img style="border-width: 2px; border-style: solid; width: 133px; height: 100px; float: right;" alt="Evening Primrose" src="http://www.doomsday-survival.info/wp-content/uploads/2013/09/wild-evening-primrose.jpg"></p>
+
+<p>Leaves - Late Spring to Mid/Late summer</p>
+
+<p>Description:</p>
+
+<p>&nbsp;</p>
+
+<hr>
+<p><br>
+<em><strong>14 - Fly Honeysuckle</strong></em>&nbsp;<img style="border-width: 2px; border-style: solid; width: 133px; height: 100px; float: right;" alt="Fly Honeysuckle" src="http://www.doomsday-survival.info/wp-content/uploads/2013/09/fly-honeysuckle.jpg"></p>
+
+<p>Berries - Summer</p>
+
+<p>Description:</p>
+
+<p>&nbsp;</p>
+
+<hr>
+<p><br>
+<em><strong>15 - Grasses </strong></em>&nbsp; &nbsp; &nbsp;<img style="border-width: 2px; border-style: solid; width: 133px; height: 100px; float: right;" alt="Wild Grasses" src="http://www.doomsday-survival.info/wp-content/uploads/2013/09/wild-grass.jpg"></p>
+
+<p>Description:</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<hr>
+<p><br>
+<em><strong>16 - Greenbriers </strong></em>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<img style="border-width: 2px; border-style: solid; width: 133px; height: 100px; float: right;" alt="Wild Greenbrier Tips" src="http://www.doomsday-survival.info/wp-content/uploads/2013/09/wild-greenbrier-tips.jpg"></p>
+
+<p>Leaves - Spring to Summer</p>
+
+<p>Roots - All Year Around</p>
+
+<p>Shoots - Spring to Summer</p>
+
+<p>Tendrils - Spring to Summer</p>
+
+<p>Description:</p>
+
+<p>&nbsp;</p>
+
+<hr>
+<p><br>
+<em><strong>17 - Hemlock Trees</strong></em>&nbsp; &nbsp;&nbsp;<img style="border-width: 2px; border-style: solid; width: 133px; height: 100px; float: right;" alt="Hemlock" src="http://www.doomsday-survival.info/wp-content/uploads/2013/09/wild-hemlock-tree.jpg"></p>
+
+<p>Inner Bark - Spring</p>
+
+<p>Needles - All Year Around</p>
+
+<p>Description:</p>
+
+<p>&nbsp;</p>
+
+<hr>
+<p><br>
+<em><strong>18 - Maple Trees </strong></em>&nbsp;&nbsp;<img style="border-width: 2px; border-style: solid; width: 133px; height: 100px; float: right;" alt="Maple Tree" src="http://www.doomsday-survival.info/wp-content/uploads/2013/09/Maple-tree-and-leaves.jpg"></p>
+
+<p>Pitch/Sap - Early Spring</p>
+
+<p>Inner bark - Spring</p>
+
+<p>Seedlings - Early Spring</p>
+
+<p>Seeds - Fall</p>
+
+<p>Description:</p>
+
+<p>&nbsp;</p>
+
+<hr>
+<p>&nbsp;</p>
+
+<p><span style="line-height: 1.6em;"><em><strong>19 - Milkweed &nbsp; &nbsp; </strong></em>&nbsp;<img style="border-width: 2px; border-style: solid; width: 133px; height: 100px; float: right;" alt="Milkweed w/Buds" src="http://www.doomsday-survival.info/wp-content/uploads/2013/09/Milkweed-with-buds.jpg"></span></p>
+
+<p>Flowers - Summer</p>
+
+<p>Seed Pods - Late Summer</p>
+
+<p>Young Leaves - Early Spring</p>
+
+<p>Young Shoots - Early Spring</p>
+
+<p>Description:</p>
+
+<p>&nbsp;</p>
+
+<hr>
+<p>&nbsp;</p>
+
+<p><em><strong>20 - Nettles </strong></em>&nbsp; &nbsp; &nbsp;&nbsp;<img style="border-width: 2px; border-style: solid; width: 133px; height: 100px; float: right;" alt="Stinging Nettles" src="http://www.doomsday-survival.info/wp-content/uploads/2013/09/Stinging-Nettles.jpg"></p>
+
+<p>Leaves - Summer</p>
+
+<p>Shoots - Spring</p>
+
+<p>Roots - All Year Around</p>
+
+<p>Description:</p>
+
+<p>&nbsp;</p>
+
+<hr>
+<p>&nbsp;</p>
+
+<p><em><strong>21 - New Jersey Tea &nbsp;</strong></em> &nbsp; &nbsp;&nbsp;<img style="border-width: 2px; border-style: solid; width: 133px; height: 100px; float: right;" alt="New Jersey Tea" src="http://www.doomsday-survival.info/wp-content/uploads/2013/09/New-Jersey-Tea.jpg"></p>
+
+<p>Leaves - Late Spring to Early Fall</p>
+
+<p>Description:</p>
+
+<p>&nbsp;</p>
+
+<hr>
+<p>&nbsp;</p>
+
+<p><em><strong>22 - Passion Flower </strong></em>&nbsp; &nbsp;<img style="border-width: 2px; border-style: solid; width: 133px; height: 100px; float: right;" alt="Passion Flower" src="http://www.doomsday-survival.info/wp-content/uploads/2013/09/Wild-Passion-Flower.jpg"></p>
+
+<p>Berries/Fruit - Late Summer to Early Fall</p>
+
+<p>Description:</p>
+
+<p>&nbsp;</p>
+
+<hr>
+<p>&nbsp;</p>
+
+<p><em><strong>23 - Peppermint &nbsp;</strong></em> &nbsp; &nbsp;<img style="border-width: 2px; border-style: solid; width: 133px; height: 100px; float: right;" alt="Wild Peppermint" src="http://www.doomsday-survival.info/wp-content/uploads/2013/09/Wild-Peppermint.jpg"></p>
+
+<p>Leaves - Summer to Fall</p>
+
+<p>Description:</p>
+
+<p>&nbsp;</p>
+
+<hr>
+<p>&nbsp;</p>
+
+<p><span style="line-height: 1.6em;"><em><strong>24 - Pine Trees</strong> </em>&nbsp; &nbsp; &nbsp;&nbsp;<img style="border-width: 2px; border-style: solid; width: 133px; height: 100px; float: right;" alt="Pine Tree" src="http://www.doomsday-survival.info/wp-content/uploads/2013/09/wild-pine-tree.jpg"></span></p>
+
+<p>Needles - All Year Around</p>
+
+<p>Pollen Anthers - Spring</p>
+
+<p>Cone/seeds - All Year around</p>
+
+<p>Description:</p>
+
+<p>&nbsp;</p>
+
+<hr>
+<p>&nbsp;</p>
+
+<p><em><strong>25 - Plantain &nbsp; &nbsp;&nbsp;</strong></em><img style="border-width: 2px; border-style: solid; width: 133px; height: 100px; float: right;" alt="Plantain" src="http://www.doomsday-survival.info/wp-content/uploads/2013/09/Wild-Plantain.jpg"></p>
+
+<p>Leaves - Early Spring</p>
+
+<p>Seeds - Summer</p>
+
+<p>Description:</p>
+
+<p>&nbsp;</p>
+
+<hr>
+<p><br>
+26 - Pond Lily</p>
+
+<p>Seeds - Late Summer to Fall</p>
+
+<p>Roots - Fall to Early Spring</p>
+
+<p>Description:</p>
+
+<p>&nbsp;</p>
+
+<p><br>
+27 - Prickly Pears</p>
+
+<p>Pads - Spring to Early Summer</p>
+
+<p>Seeds/Fruit - Late Summer to Fall</p>
+
+<p>Description:</p>
+
+<p>&nbsp;</p>
+
+<p><br>
+28 - Reed</p>
+
+<p>Leaves - early Spring</p>
+
+<p>Shoots - Early Spring</p>
+
+<p>Seeds - Fall</p>
+
+<p>Young Stems - Early summer</p>
+
+<p>Roots - Fall to Early Spring</p>
+
+<p>Description:</p>
+
+<p>&nbsp;</p>
+
+<p><br>
+29 - Salal</p>
+
+<p>Berries - Fall</p>
+
+<p>Description:</p>
+
+<p>&nbsp;</p>
+
+<p><br>
+30 - Saw Palmetto</p>
+
+<p>Fruit - fall</p>
+
+<p>Terminal Bud - All Year around</p>
+
+<p>Description:</p>
+
+<p>&nbsp;</p>
+
+<p>31 - Sheep Sorrel</p>
+
+<p>Leaves - Spring and Summer</p>
+
+<p>Description:</p>
+
+<p>&nbsp;</p>
+
+<p><br>
+32 - Spruce Tree's</p>
+
+<p>Inner Bark - Spring</p>
+
+<p>Needles - All year around</p>
+
+<p>Young shoots - Spring</p>
+
+<p>Description:</p>
+
+<p>&nbsp;</p>
+
+<p><br>
+33 - Sumac</p>
+
+<p>Berries - Summer</p>
+
+<p>Description:</p>
+
+<p>&nbsp;</p>
+
+<p><br>
+34 - Sun Flower</p>
+
+<p>Seeds - Late Summer to Fall</p>
+
+<p>Description:</p>
+
+<p>&nbsp;</p>
+
+<p>35 - Sweet Fern</p>
+
+<p>Leaves - Late spring to Early Fall</p>
+
+<p>Nuts - Summer to Fall</p>
+
+<p>Description:</p>
+
+<p>&nbsp;</p>
+
+<p><br>
+36 - Tamarack</p>
+
+<p>Inner Bark - spring</p>
+
+<p>shoots - Spring</p>
+
+<p>Description:</p>
+
+<p>&nbsp;</p>
+
+<p>37 - Thistles</p>
+
+<p>Leaves - Spring to Early Summer</p>
+
+<p>Stalks - Summer Pre-Bloom</p>
+
+<p>Roots - Spring to fall</p>
+
+<p>Description:</p>
+
+<p>&nbsp;</p>
+
+<p>38 - Walnuts</p>
+
+<p>Pitch/sap - Early Spring</p>
+
+<p>Nuts - Fall</p>
+
+<p>Description:</p>
+
+<p>&nbsp;</p>
+
+<p>39 - Watercress</p>
+
+<p>Young Leaves - All Year Around</p>
+
+<p>Stems - All Year Around</p>
+
+<p>Description:</p>
+
+<p>&nbsp;</p>
+
+<p>40 - Wild Asparagus</p>
+
+<p>Young Shoots - Early Spring</p>
+
+<p>Description:</p>
+
+<p>&nbsp;</p>
+
+<p>41 - Wild Carrot</p>
+
+<p>Roots - Fall to Early Spring</p>
+
+<p>Description:</p>
+
+<p>&nbsp;</p>
+
+<p><br>
+42 - Wild Ginger</p>
+
+<p>Roots - Early spring to Fall</p>
+
+<p>Description:</p>
+
+<p>&nbsp;</p>
+
+<p>43 - Wild Grapes</p>
+
+<p>Leaves - Early Summer</p>
+
+<p>Fruit - Late Summer to Fall</p>
+
+<p>Description:</p>
+
+<p>&nbsp;</p>
+
+<p>44 - Wild Onions</p>
+
+<p>Leaves - Spring</p>
+
+<p>Bulbs - All Year Around</p>
+
+<p>Bulblets - Summer</p>
+
+<p>Description:</p>
+
+<p>&nbsp;</p>
+
+<p>45 - Wild Parsnip</p>
+
+<p>Roots - Fall to Early Spring</p>
+
+<p>Description:</p>
+
+<p>&nbsp;</p>
+
+<p><br>
+46 - Wild Potato Vine</p>
+
+<p>Roots - All year Around</p>
+
+<p>Description:</p>
+
+<p>&nbsp;</p>
+
+<p><br>
+47 - Wild Raisins</p>
+
+<p>Fruit - Fall</p>
+
+<p>Description:</p>
+
+<p>&nbsp;</p>
+
+<p>48 - Wild Strawberries</p>
+
+<p>Leaves - Summer</p>
+
+<p>Fruits - Summer</p>
+
+<p>Description:</p>
+
+<p>&nbsp;</p>
+
+<p><br>
+49 - Willows</p>
+
+<p>Inner Bark - Spring Through Summer</p>
+
+<p>Description:</p>
+
+<p>&nbsp;</p>
+
+<p><br>
+50 - Wood Sorrels</p>
+
+<p>Leaves - Spring to Summer</p>
+
+<p>Description:</p>
+</div>
+</div></div>
+                    <img id="backMenu" src="./backMenu.png">
+                </div>                
+            
+
+
+
+            </div><!-- /content -->
+
+
+
+            <style> .nav-glyphish-example .ui-btn .ui-btn-inner { padding-top: 40px !important; width: 60px!important;}		.nav-glyphish-example .ui-btn .ui-icon { width: 30px!important; height: 30px!important; margin-left: -15px !important; box-shadow: none!important; -moz-box-shadow: none!important; -webkit-box-shadow: none!important; -webkit-border-radius: 0 !important; border-radius: 0 !important; }#tab1 .ui-icon { background:  url("icons_tech_1579.png") 50% 50% no-repeat; background-size: 50px 50px; }#tab2 .ui-icon { background:  url("icons_communication_1092.png") 50% 50% no-repeat; background-size: 50px 50px; }  a[href="youtubeKeywords.html"] .ui-icon { background:  url("icon(54).png") 50% 50% no-repeat !important;background-size: 30px 30px !important; }   a[href="content4.html"] .ui-icon { background:  url("icon(12).png") 50% 50% no-repeat !important;background-size: 30px 30px !important; }   a[href="content3.html"] .ui-icon { background:  url("icon(44).png") 50% 50% no-repeat !important;background-size: 30px 30px !important; }   a[href="content2.html"] .ui-icon { background:  url("icon(124).png") 50% 50% no-repeat !important;background-size: 30px 30px !important; }   a[href="content3.html"] .ui-icon { background:  url("icon(13).png") 50% 50% no-repeat !important;background-size: 30px 30px !important; } #tab3 .ui-icon { background:  url("64Px_-_504-11.png") 50% 50% no-repeat; background-size: 30px 30px; }#tab4 .ui-icon { background:  url("64Px_-_504-210.png") 50% 50% no-repeat; background-size: 30px 30px; }#tab5 .ui-icon { background:  url("more.png") 50% 50% no-repeat; background-size: 30px 30px; } .ui-content{ word-wrap: break-word; } </style>
+
+
+
+            <div data-role="footer" data-position="fixed" class="nav-glyphish-example" data-id="myfooter" data-theme="a" data-tap-toggle="false"><div data-role="navbar" class="nav-glyphish-example"><ul><li><a href="content3.html" id="tab2" data-icon="custom" rel="external"  data-gourl="content3.html" class="" onclick="window.open('content3.html','_self', 'location=yes')">Introduction</a></li><li><a href="content2.html" id="tab2" data-icon="custom" rel="external"  data-gourl="content2.html" class="" onclick="window.open('content2.html','_self', 'location=yes')">The 4 Core</a></li><li><a href="content3.html" id="tab2" data-icon="custom" rel="external"  data-gourl="content3.html" class="" onclick="window.open('content3.html','_self', 'location=yes')">50 Edible Plants</a></li><li><a href="content4.html" id="tab2" data-icon="custom" rel="external"  data-gourl="content4.html" class="" onclick="window.open('content4.html','_self', 'location=yes')">Resources</a></li><li><a href="more.html" id="tab5" data-icon="custom" rel="external">More</a></li></ul></div></div>
+
+
+
+        </div>	
+
+
+
+    </body>
+
+
+
+</html>
